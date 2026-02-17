@@ -1,6 +1,11 @@
 // วิธีที่ 1 For loop
 function findStudentById(students, id) {
   // Your code here
+  //สมมติว่า id ของนักเรียนไม่สามารถเป็น 0, ติดลบ และทศนิยมได้ ให้ return ก่อนที่จะเข้าไปใน loop 
+  if (!Number.isInteger(id) || id <= 0) return null;
+  // students ที่ส่งมาไม่ใช่ Array
+  if (!Array.isArray(students)) return null;
+
   for(let student of students){
     if(student.id === id){
       return student
