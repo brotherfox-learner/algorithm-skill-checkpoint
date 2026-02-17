@@ -1,5 +1,11 @@
 function findStudentById(students, id) {
   // Your code here
+  for(let student of students){
+    if(student.id === id){
+      return student
+    }
+  }
+  return null
 }
 
 // Test case
@@ -12,4 +18,26 @@ const students = [
 ];
 
 console.log(findStudentById(students, 302)); // Output: { id: 302, name: "Emily Carter" }
+console.log(findStudentById(students, 105)); 
+console.log(findStudentById(students, 501)); 
+console.log(findStudentById(students, 207)); 
 console.log(findStudentById(students, 4)); // Output: null
+console.log(findStudentById(students, 6)); // Output: null
+console.log(findStudentById(students, -1)); // Output: null
+console.log(findStudentById(students, 0)); // Output: null
+
+
+function findStudentById2(students, id) {
+  // Your code here
+  let student = students.find(s => s.id === id)
+  return student || null
+}
+
+console.log(findStudentById2(students, 302)); // Output: { id: 302, name: "Emily Carter" }
+console.log(findStudentById2(students, 105)); 
+console.log(findStudentById2(students, 501)); 
+console.log(findStudentById2(students, 207)); 
+console.log(findStudentById2(students, 4)); // Output: null
+console.log(findStudentById2(students, 6)); // Output: null
+console.log(findStudentById2(students, -1)); // Output: null
+console.log(findStudentById2(students, 0)); // Output: null
