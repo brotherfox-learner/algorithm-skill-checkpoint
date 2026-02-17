@@ -1,3 +1,4 @@
+// วิธีที่ 1 For loop
 function findStudentById(students, id) {
   // Your code here
   for(let student of students){
@@ -26,7 +27,7 @@ console.log(findStudentById(students, 6)); // Output: null
 console.log(findStudentById(students, -1)); // Output: null
 console.log(findStudentById(students, 0)); // Output: null
 
-
+// วิธีที่ 2 Built in
 function findStudentById2(students, id) {
   // Your code here
   let student = students.find(s => s.id === id)

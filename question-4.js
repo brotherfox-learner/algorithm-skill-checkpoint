@@ -1,3 +1,4 @@
+// วิธีที่ 1 Nested Loop
 function sortProductsByPrice(products) {
   // Your code here (Bubble sort)
   for (let i = 0; i < products.length; i++) {
@@ -10,11 +11,6 @@ function sortProductsByPrice(products) {
     }
   }
   return products
-}
-
-function sortProductsByPrice2(products) {
-  // .sort Built in
-  return products.sort((a,b)=> a.price - b.price)
 }
 
 // Test case
@@ -32,3 +28,11 @@ console.log(sortProductsByPrice(products));
 //   { name: 'Date', price: 1.5 },
 //   { name: 'Cherry', price: 2.5 }
 // ]
+
+// วิธีที่ 2 Built in
+function sortProductsByPrice2(products) {
+  // .sort Built in
+  return products.sort((a,b)=> a.price - b.price)
+}
+
+console.log(sortProductsByPrice2(products));

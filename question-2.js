@@ -1,3 +1,4 @@
+// วิธีที่ 1 For loop
 function findProductPrice(products, name) {
   // Your code here
   for (let product of products) {
@@ -21,6 +22,8 @@ console.log(findProductPrice(products, "Cherry"));
 console.log(findProductPrice(products, "Rambutan"));
 console.log(findProductPrice(products, "Durian")); // Output: -1
 
+
+// วิธีที่ 2 Built in
 function findProductPrice2(products, name) {
   // Your code here
   let product = products.find(p => p.name === name);
