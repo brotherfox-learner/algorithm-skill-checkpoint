@@ -6,11 +6,26 @@ function findProductPrice(products, name) {
     // products ที่ส่งมาไม่ใช่ Array
     if (!Array.isArray(products)) return -1;
 
-  for (let product of products) {
-    if (product.name === name) {
-      return product.price
+    // binary search
+    let left = 0 
+    let right = products.length - 1
+    while (left <= right) {
+      let mid = Math.floor((left + right) / 2)
+      if (products[mid].name === name) {
+        return products[mid].price
+      } else if (products[mid].name < name) {
+        left = mid + 1
+      } else {
+        right = mid - 1
+      }
     }
-  }
+    return -1
+
+  // for (let product of products) {
+  //   if (product.name === name) {
+  //     return product.price
+  //   }
+  // }
   return -1
 }
 
